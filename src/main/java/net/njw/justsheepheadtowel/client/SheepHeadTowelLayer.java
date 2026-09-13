@@ -17,11 +17,11 @@ import net.njw.justsheepheadtowel.item.ModItems;
 
 public final class SheepHeadTowelLayer extends RenderLayer<AvatarRenderState, PlayerModel> {
     private static final Identifier TEXTURE = Identifier.fromNamespaceAndPath(JustSheepHeadTowel.MODID, "textures/entity/sheep_head_towel.png");
-    private final ModelPart model;
+    private final ModelPart leftEar;
 
     public SheepHeadTowelLayer(RenderLayerParent<AvatarRenderState, PlayerModel> parent, EntityModelSet modelSet) {
         super(parent);
-        this.model = modelSet.bakeLayer(SheepHeadTowelModel.LAYER_LOCATION);
+        this.leftEar = modelSet.bakeLayer(SheepHeadTowelModel.LAYER_LOCATION).getChild("left_ear");
     }
 
     @Override
@@ -32,7 +32,7 @@ public final class SheepHeadTowelLayer extends RenderLayer<AvatarRenderState, Pl
 
         poseStack.pushPose();
         getParentModel().head.translateAndRotate(poseStack);
-        collector.order(0).submitModelPart(model, poseStack, RenderTypes.entityCutout(TEXTURE), lightCoords, OverlayTexture.NO_OVERLAY, null);
+        collector.order(0).submitModelPart(leftEar, poseStack, RenderTypes.entityCutout(TEXTURE), lightCoords, OverlayTexture.NO_OVERLAY, null);
         poseStack.popPose();
     }
 }
