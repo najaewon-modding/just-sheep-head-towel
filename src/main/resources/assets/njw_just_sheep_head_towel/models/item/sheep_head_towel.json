@@ -2,5 +2,12 @@
   "parent": "minecraft:item/generated",
   "textures": {
     "layer0": "njw_just_sheep_head_towel:item/sheep_head_towel"
+  },
+  "display": {
+    "head": {
+      "rotation": [0, 0, 0],
+      "translation": [0, 0, 0],
+      "scale": [0, 0, 0]
+    }
   }
 }
