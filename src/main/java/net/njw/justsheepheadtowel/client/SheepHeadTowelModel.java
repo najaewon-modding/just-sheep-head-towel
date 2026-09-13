@@ -20,11 +20,11 @@ public final class SheepHeadTowelModel {
         PartDefinition root = mesh.getRoot();
 
         root.addOrReplaceChild("left_ear", CubeListBuilder.create()
-            .texOffs(0, 32).addBox(-3.0F, -2.5F, -2.5F, 3.0F, 5.0F, 5.0F)
-            .texOffs(16, 32).addBox(-2.5F, -3.0F, -2.0F, 2.5F, 0.5F, 4.0F)
-            .texOffs(16, 38).addBox(-2.5F, 2.5F, -2.0F, 2.5F, 0.5F, 4.0F)
-            .texOffs(32, 32).addBox(-4.0F, -1.75F, -1.75F, 1.0F, 3.5F, 3.5F)
-            .texOffs(42, 32).addBox(-4.75F, -1.0F, -1.0F, 0.75F, 2.0F, 2.0F), PartPose.offset(-4.25F, -4.0F, 0.0F));
+            .texOffs(0, 32).addBox(-7.25F, -6.5F, -2.5F, 3.0F, 5.0F, 5.0F)
+            .texOffs(16, 32).addBox(-6.75F, -7.0F, -2.0F, 2.5F, 0.5F, 4.0F)
+            .texOffs(16, 38).addBox(-6.75F, -1.5F, -2.0F, 2.5F, 0.5F, 4.0F)
+            .texOffs(32, 32).addBox(-8.25F, -5.75F, -1.75F, 1.0F, 3.5F, 3.5F)
+            .texOffs(42, 32).addBox(-9.0F, -5.0F, -1.0F, 0.75F, 2.0F, 2.0F), PartPose.ZERO);
 
         return LayerDefinition.create(mesh, 64, 64);
     }
