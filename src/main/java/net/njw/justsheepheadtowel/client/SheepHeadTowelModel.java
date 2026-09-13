@@ -19,24 +19,30 @@ public final class SheepHeadTowelModel {
         MeshDefinition mesh = new MeshDefinition();
         PartDefinition root = mesh.getRoot();
 
-        root.addOrReplaceChild("top_towel", CubeListBuilder.create()
-            .texOffs(0, 0).addBox(-4.35F, -8.65F, -4.35F, 8.7F, 2.1F, 8.7F), PartPose.ZERO);
+        root.addOrReplaceChild("towel_top", CubeListBuilder.create()
+            .texOffs(0, 0).addBox(-4.25F, -8.25F, -4.25F, 8.5F, 1.25F, 8.5F), PartPose.ZERO);
 
-        root.addOrReplaceChild("left_wrap", CubeListBuilder.create()
-            .texOffs(0, 18).addBox(-1.25F, 0.0F, -4.1F, 2.5F, 4.2F, 8.2F), PartPose.offsetAndRotation(-4.0F, -6.85F, 0.0F, 0.0F, 0.0F, 0.52F));
+        root.addOrReplaceChild("towel_front", CubeListBuilder.create()
+            .texOffs(0, 10).addBox(-4.25F, -7.0F, -4.25F, 8.5F, 1.5F, 1.25F), PartPose.ZERO);
 
-        root.addOrReplaceChild("right_wrap", CubeListBuilder.create()
-            .texOffs(22, 18).addBox(-1.25F, 0.0F, -4.1F, 2.5F, 4.2F, 8.2F), PartPose.offsetAndRotation(4.0F, -6.85F, 0.0F, 0.0F, 0.0F, -0.52F));
+        root.addOrReplaceChild("towel_back", CubeListBuilder.create()
+            .texOffs(0, 14).addBox(-4.25F, -7.0F, 3.0F, 8.5F, 4.0F, 1.25F), PartPose.ZERO);
+
+        root.addOrReplaceChild("towel_left", CubeListBuilder.create()
+            .texOffs(22, 10).addBox(-4.25F, -7.0F, -3.0F, 1.25F, 4.0F, 6.0F), PartPose.ZERO);
+
+        root.addOrReplaceChild("towel_right", CubeListBuilder.create()
+            .texOffs(22, 20).addBox(3.0F, -7.0F, -3.0F, 1.25F, 4.0F, 6.0F), PartPose.ZERO);
 
         root.addOrReplaceChild("left_shell", CubeListBuilder.create()
-            .texOffs(0, 34).addBox(-2.0F, -2.25F, -2.25F, 4.0F, 4.5F, 4.5F)
-            .texOffs(18, 34).addBox(-3.15F, -1.75F, -1.75F, 1.5F, 3.5F, 3.5F)
-            .texOffs(28, 34).addBox(-3.9F, -1.15F, -1.15F, 1.0F, 2.3F, 2.3F), PartPose.offsetAndRotation(-6.55F, -3.75F, 0.0F, 0.0F, 0.0F, -0.08F));
+            .texOffs(0, 32).addBox(-2.75F, -2.25F, -2.25F, 2.75F, 4.5F, 4.5F)
+            .texOffs(16, 32).addBox(-3.65F, -1.75F, -1.75F, 0.9F, 3.5F, 3.5F)
+            .texOffs(24, 32).addBox(-4.25F, -1.15F, -1.15F, 0.6F, 2.3F, 2.3F), PartPose.offset(-4.25F, -4.0F, 0.0F));
 
         root.addOrReplaceChild("right_shell", CubeListBuilder.create()
-            .texOffs(0, 47).addBox(-2.0F, -2.25F, -2.25F, 4.0F, 4.5F, 4.5F)
-            .texOffs(18, 47).addBox(1.65F, -1.75F, -1.75F, 1.5F, 3.5F, 3.5F)
-            .texOffs(28, 47).addBox(2.9F, -1.15F, -1.15F, 1.0F, 2.3F, 2.3F), PartPose.offsetAndRotation(6.55F, -3.75F, 0.0F, 0.0F, 0.0F, 0.08F));
+            .texOffs(0, 46).addBox(0.0F, -2.25F, -2.25F, 2.75F, 4.5F, 4.5F)
+            .texOffs(16, 46).addBox(2.75F, -1.75F, -1.75F, 0.9F, 3.5F, 3.5F)
+            .texOffs(24, 46).addBox(3.65F, -1.15F, -1.15F, 0.6F, 2.3F, 2.3F), PartPose.offset(4.25F, -4.0F, 0.0F));
 
         return LayerDefinition.create(mesh, 64, 64);
     }
