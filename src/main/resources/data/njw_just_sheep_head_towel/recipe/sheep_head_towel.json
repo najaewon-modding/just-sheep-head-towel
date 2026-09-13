@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "NWN"
+  ],
+  "key": {
+    "N": "minecraft:nautilus_shell",
+    "W": "#minecraft:wool"
+  },
+  "result": {
+    "id": "njw_just_sheep_head_towel:sheep_head_towel"
+  }
+}
