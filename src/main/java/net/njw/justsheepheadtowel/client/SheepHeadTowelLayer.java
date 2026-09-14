@@ -32,7 +32,8 @@ public final class SheepHeadTowelLayer extends RenderLayer<AvatarRenderState, Pl
 
         poseStack.pushPose();
         getParentModel().head.translateAndRotate(poseStack);
-        collector.order(0).submitModelPart(leftEar, poseStack, RenderTypes.entityCutout(TEXTURE), lightCoords, OverlayTexture.NO_OVERLAY, null);
+        poseStack.translate(-6.5F / 16.0F, -4.0F / 16.0F, 0.0F);
+        collector.order(0).submitModelPart(leftEar, poseStack, RenderTypes.entitySolid(TEXTURE), lightCoords, OverlayTexture.NO_OVERLAY, null);
         poseStack.popPose();
     }
 }
