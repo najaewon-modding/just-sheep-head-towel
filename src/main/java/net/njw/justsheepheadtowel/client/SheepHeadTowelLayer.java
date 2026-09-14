@@ -11,23 +11,24 @@ import net.minecraft.client.renderer.rendertype.RenderTypes;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.resources.Identifier;
 import net.njw.justsheepheadtowel.JustSheepHeadTowel;
-import net.njw.justsheepheadtowel.item.ModItems;
 
 public final class SheepHeadTowelLayer extends RenderLayer<AvatarRenderState, PlayerModel> {
     private static final Identifier TEXTURE = Identifier.fromNamespaceAndPath(JustSheepHeadTowel.MODID, "textures/entity/sheep_head_towel.png");
+    private static boolean loggedSubmit;
     private final SheepHeadTowelModel model;
 
     public SheepHeadTowelLayer(RenderLayerParent<AvatarRenderState, PlayerModel> parent, EntityModelSet modelSet) {
         super(parent);
         this.model = new SheepHeadTowelModel(modelSet.bakeLayer(SheepHeadTowelModel.LAYER_LOCATION));
+        JustSheepHeadTowel.LOGGER.info("SheepHeadTowelLayer constructed");
     }
 
     @Override
     public void submit(PoseStack poseStack, SubmitNodeCollector collector, int lightCoords, AvatarRenderState state, float yRot, float xRot) {
-        if (state.headEquipment.getItem() != ModItems.SHEEP_HEAD_TOWEL.get()) {
-            return;
+        if (!loggedSubmit) {
+            loggedSubmit = true;
+            JustSheepHeadTowel.LOGGER.info("SheepHeadTowelLayer submit invoked; head equipment = {}", state.headEquipment);
         }
-
         poseStack.pushPose();
         collector.submitModel(model, state, poseStack, RenderTypes.entitySolid(TEXTURE), lightCoords, OverlayTexture.NO_OVERLAY, state.outlineColor, null);
         poseStack.popPose();
