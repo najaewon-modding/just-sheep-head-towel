@@ -28,15 +28,15 @@ public final class SheepHeadTowelModel extends HumanoidModel<AvatarRenderState> 
         head.clearChild("hat");
 
         head.addOrReplaceChild("left_shell", CubeListBuilder.create()
-            .texOffs(0, 0).addBox(-10.5F, -6.5F, -2.4F, 1.6F, 5.0F, 4.8F)
-            .texOffs(14, 0).addBox(-11.3F, -6.0F, -2.2F, 0.8F, 4.0F, 4.4F)
-            .texOffs(24, 0).addBox(-11.8F, -5.3F, -1.8F, 0.5F, 2.8F, 3.6F)
-            .texOffs(32, 0).addBox(-9.0F, -6.0F, -2.0F, 0.9F, 4.0F, 4.0F)
-            .texOffs(42, 0).addBox(-8.2F, -5.4F, -1.6F, 0.8F, 2.8F, 3.2F)
-            .texOffs(0, 12).addBox(-10.0F, -7.1F, -1.7F, 1.8F, 0.6F, 3.4F)
-            .texOffs(10, 12).addBox(-10.0F, -1.5F, -1.7F, 1.8F, 0.6F, 3.4F)
-            .texOffs(20, 12).addBox(-9.5F, -5.2F, -1.2F, 0.7F, 2.4F, 2.4F)
-            .texOffs(28, 12).addBox(-9.2F, -4.7F, -0.8F, 0.5F, 1.4F, 1.6F), PartPose.ZERO);
+            .texOffs(0, 0).addBox(-7.2F, -6.5F, -2.4F, 1.6F, 5.0F, 4.8F)
+            .texOffs(14, 0).addBox(-8.0F, -6.0F, -2.2F, 0.8F, 4.0F, 4.4F)
+            .texOffs(24, 0).addBox(-8.5F, -5.3F, -1.8F, 0.5F, 2.8F, 3.6F)
+            .texOffs(32, 0).addBox(-5.7F, -6.0F, -2.0F, 0.9F, 4.0F, 4.0F)
+            .texOffs(42, 0).addBox(-4.9F, -5.4F, -1.6F, 0.8FF, 2.8F, 3.2F)
+            .texOffs(0, 12).addBox(-6.7F, -7.1F, -1.7F, 1.8F, 0.6F, 3.4F)
+            .texOffs(10, 12).addBox(-6.7F, -1.5F, -1.7F, 1.8F, 0.6F, 3.4F)
+            .texOffs(20, 12).addBox(-6.2F, -5.2F, -1.2F, 0.7F, 2.4F, 2.4F)
+            .texOffs(28, 12).addBox(-5.9F, -4.7F, -0.8F, 0.5F, 1.4F, 1.6F), PartPose.ZERO);
 
         return LayerDefinition.create(mesh, 64, 64);
     }
