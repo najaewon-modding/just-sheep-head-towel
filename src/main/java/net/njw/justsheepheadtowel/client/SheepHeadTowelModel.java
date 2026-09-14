@@ -28,26 +28,26 @@ public final class SheepHeadTowelModel extends HumanoidModel<AvatarRenderState> 
         head.clearChild("hat");
 
         head.addOrReplaceChild("left_shell", CubeListBuilder.create()
-            .texOffs(0, 0).addBox(-7.2F, -6.5F, -2.4F, 1.6F, 5.0F, 4.8F)
-            .texOffs(14, 0).addBox(-8.0F, -6.0F, -2.2F, 0.8F, 4.0F, 4.4F)
-            .texOffs(24, 0).addBox(-8.5F, -5.3F, -1.8F, 0.5F, 2.8F, 3.6F)
-            .texOffs(32, 0).addBox(-5.7F, -6.0F, -2.0F, 0.9F, 4.0F, 4.0F)
-            .texOffs(42, 0).addBox(-4.9F, -5.4F, -1.6F, 0.8F, 2.8F, 3.2F)
-            .texOffs(0, 12).addBox(-6.7F, -7.1F, -1.7F, 1.8F, 0.6F, 3.4F)
-            .texOffs(10, 12).addBox(-6.7F, -1.5F, -1.7F, 1.8F, 0.6F, 3.4F)
-            .texOffs(20, 12).addBox(-6.2F, -5.2F, -1.2F, 0.7F, 2.4F, 2.4F)
-            .texOffs(28, 12).addBox(-5.9F, -4.7F, -0.8F, 0.5F, 1.4F, 1.6F), PartPose.ZERO);
+            .texOffs(0, 0).addBox(-6.45F, -5.95F, -1.9F, 1.2F, 3.9F, 3.8F)
+            .texOffs(14, 0).addBox(-7.05F, -5.55F, -1.75F, 0.6F, 3.1F, 3.5F)
+            .texOffs(24, 0).addBox(-7.40F, -5.00F, -1.45F, 0.35F, 2.2F, 2.9F)
+            .texOffs(32, 0).addBox(-5.30F, -5.55F, -1.6F, 0.7F, 3.1F, 3.2F)
+            .texOffs(42, 0).addBox(-4.70F, -5.05F, -1.3F, 0.6F, 2.2F, 2.6F)
+            .texOffs(0, 12).addBox(-6.05F, -6.45F, -1.35F, 1.4F, 0.5F, 2.7F)
+            .texOffs(10, 12).addBox(-6.05F, -2.05F, -1.35F, 1.4F, 0.5F, 2.7F)
+            .texOffs(20, 12).addBox(-5.65F, -5.00F, -0.95F, 0.55F, 1.9F, 1.9F)
+            .texOffs(28, 12).addBox(-5.40F, -4.60F, -0.65F, 0.4F, 1.1F, 1.3F), PartPose.ZERO);
 
         head.addOrReplaceChild("right_shell", CubeListBuilder.create().mirror()
-            .texOffs(0, 0).addBox(5.6F, -6.5F, -2.4F, 1.6F, 5.0F, 4.8F)
-            .texOffs(14, 0).addBox(7.2F, -6.0F, -2.2F, 0.8F, 4.0F, 4.4F)
-            .texOffs(24, 0).addBox(8.0F, -5.3F, -1.8F, 0.5F, 2.8F, 3.6F)
-            .texOffs(32, 0).addBox(4.8F, -6.0F, -2.0F, 0.9F, 4.0F, 4.0F)
-            .texOffs(42, 0).addBox(4.1F, -5.4F, -1.6F, 0.8F, 2.8F, 3.2F)
-            .texOffs(0, 12).addBox(4.9F, -7.1F, -1.7F, 1.8F, 0.6F, 3.4F)
-            .texOffs(10, 12).addBox(4.9F, -1.5F, -1.7F, 1.8F, 0.6F, 3.4F)
-            .texOffs(20, 12).addBox(5.5F, -5.2F, -1.2F, 0.7F, 2.4F, 2.4F)
-            .texOffs(28, 12).addBox(5.4F, -4.7F, -0.8F, 0.5F, 1.4F, 1.6F), PartPose.ZERO);
+            .texOffs(0, 0).addBox(5.25F, -5.95F, -1.9F, 1.2F, 3.9F, 3.8F)
+            .texOffs(14, 0).addBox(6.45F, -5.55F, -1.75F, 0.6F, 3.1F, 3.5F)
+            .texOffs(24, 0).addBox(7.05F, -5.00F, -1.45F, 0.35F, 2.2F, 2.9F)
+            .texOffs(32, 0).addBox(4.60F, -5.55F, -1.6F, 0.7F, 3.1F, 3.2F)
+            .texOffs(42, 0).addBox(4.10F, -5.05F, -1.3F, 0.6F, 2.2F, 2.6F)
+            .texOffs(0, 12).addBox(4.65F, -6.45F, -1.35F, 1.4F, 0.5F, 2.7F)
+            .texOffs(10, 12).addBox(4.65F, -2.05F, -1.35F, 1.4F, 0.5F, 2.7F)
+            .texOffs(20, 12).addBox(5.10F, -5.00F, -0.95F, 0.55F, 1.9F, 1.9F)
+            .texOffs(28, 12).addBox(5.00F, -4.60F, -0.65F, 0.4F, 1.1F, 1.3F), PartPose.ZERO);
 
         return LayerDefinition.create(mesh, 64, 64);
     }
