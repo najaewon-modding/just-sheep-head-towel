@@ -1,9 +1,7 @@
 package net.njw.justsheepheadtowel.client;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-
 import net.minecraft.client.model.geom.EntityModelSet;
-import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.player.PlayerModel;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.entity.RenderLayerParent;
@@ -17,11 +15,11 @@ import net.njw.justsheepheadtowel.item.ModItems;
 
 public final class SheepHeadTowelLayer extends RenderLayer<AvatarRenderState, PlayerModel> {
     private static final Identifier TEXTURE = Identifier.fromNamespaceAndPath(JustSheepHeadTowel.MODID, "textures/entity/sheep_head_towel.png");
-    private final ModelPart leftEar;
+    private final SheepHeadTowelModel model;
 
     public SheepHeadTowelLayer(RenderLayerParent<AvatarRenderState, PlayerModel> parent, EntityModelSet modelSet) {
         super(parent);
-        this.leftEar = modelSet.bakeLayer(SheepHeadTowelModel.LAYER_LOCATION).getChild("left_ear");
+        this.model = new SheepHeadTowelModel(modelSet.bakeLayer(SheepHeadTowelModel.LAYER_LOCATION));
     }
 
     @Override
@@ -31,9 +29,7 @@ public final class SheepHeadTowelLayer extends RenderLayer<AvatarRenderState, Pl
         }
 
         poseStack.pushPose();
-        getParentModel().head.translateAndRotate(poseStack);
-        poseStack.translate(-6.5F / 16.0F, -4.0F / 16.0F, 0.0F);
-        collector.order(0).submitModelPart(leftEar, poseStack, RenderTypes.entitySolid(TEXTURE), lightCoords, OverlayTexture.NO_OVERLAY, null);
+        collector.submitModel(model, state, poseStack, RenderTypes.entitySolid(TEXTURE), lightCoords, OverlayTexture.NO_OVERLAY, state.outlineColor, null);
         poseStack.popPose();
     }
 }
