@@ -26,7 +26,7 @@ public final class SheepHeadTowelModel extends HumanoidModel<AvatarRenderState> 
         PartDefinition root = mesh.getRoot().clearRecursively();
         PartDefinition head = root.getChild("head");
         head.clearChild("hat");
-        head.addOrReplaceChild("left_ear", CubeListBuilder.create().texOffs(0, 0).addBox(-8.0F, -6.5F, -2.5F, 4.0F, 5.0F, 5.0F), PartPose.ZERO);
+        head.addOrReplaceChild("left_ear", CubeListBuilder.create().texOffs(0, 0).addBox(-16.0F, -10.0F, -6.0F, 12.0F, 12.0F, 12.0F), PartPose.ZERO);
         return LayerDefinition.create(mesh, 64, 64);
     }
 }
